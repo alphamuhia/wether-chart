@@ -174,19 +174,19 @@
     <table border="3px" id="tab">
       <thead>
         <tr>
-          <td style="font-weight: bold">COUNTY</td>
+          <td style="font-weight: bold">COUNTRY</td>
           <td style="font-weight: bold">ZIP CODE</td>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>kenya</td>
+          <td>Kenya</td>
           <td id="ip">
             <input type="number" placeholder="input zip code" id="tip" />
           </td>
         </tr>
         <tr>
-          <td>London</td>
+          <td>United Kingdom</td>
           <td id="ip">
             <input type="number" placeholder="input zip code" id="tip" />
           </td>
@@ -258,8 +258,8 @@
         const tempUnit = isCelsius ? "°C" : "°F";
         weatherResult.innerHTML = `
           <h2>Weather in ${name}</h2>
-          <p>Temperature: ${temp}${tempUnit}</p>
-          <p>Humidity: ${humidity}%</p>
+          <p> Average Temperature: ${temp}${tempUnit}</p>
+          <p> Relative Humidity: ${humidity}%</p>
           <p>Description: ${description}</p>
           <p>Date: ${new Date()}</>
       `;
