@@ -12,21 +12,21 @@
         background-size: cover;
         margin: 0;
         padding: 0;
-        animation: slider 3s linear infinite;
+        animation: slider 2s linear infinite;
       }
 
       @keyframes slider {
         0% {
-          background-image: url(Lightning-Strike.jpg);
-        }
-        33% {
-          background-image: url(lightning-strike-2.jpg);
-        }
-        66% {
           background-image: url(Lightning2500.webp);
         }
-        100% {
+        33% {
           background-image: url(3-lightningstr.jpg);
+        }
+        66% {
+          background-image: url(Lightning-Strike.jpg);
+        }
+        100% {
+          background-image: url(lightning-strike-2.jpg);
         }
       }
       #location {
@@ -87,7 +87,7 @@
         }
       }
 
-      @keyframes blink {
+      /* @keyframes blink {
         0% {
           background-color: rgb(255, 0, 0);
         }
@@ -109,7 +109,7 @@
         100% {
           background-color: rgb(255, 0, 157);
         }
-      }
+      } */
 
       h1 {
         margin-bottom: 20px;
@@ -148,10 +148,14 @@
         color: #a72828;
       }
       footer {
-        background-color: #db0000;
+        background-color: rgba(88, 88, 250, 0.815);
+        bottom: 0;
+        width: 100%;
+        position: fixed;
         padding: 10px;
         text-align: center;
         color: rgb(255, 255, 255);
+        opacity: 70%;
       }
     </style>
   </head>
@@ -171,22 +175,22 @@
       <div id="loading">Loading...</div>
       <div id="weather-result"></div>
     </div>
-    <table border="3px" id="tab">
+    <!-- <table border="3px" id="tab">
       <thead>
         <tr>
-          <td style="font-weight: bold">COUNTRY</td>
+          <td style="font-weight: bold">COUNTY</td>
           <td style="font-weight: bold">ZIP CODE</td>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Kenya</td>
+          <td>kenya</td>
           <td id="ip">
             <input type="number" placeholder="input zip code" id="tip" />
           </td>
         </tr>
         <tr>
-          <td>United Kingdom</td>
+          <td>London</td>
           <td id="ip">
             <input type="number" placeholder="input zip code" id="tip" />
           </td>
@@ -210,7 +214,7 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
     <footer>@Alpha's Weather Chart</footer>
     <script>
       let isCelsius = true;
@@ -258,8 +262,8 @@
         const tempUnit = isCelsius ? "°C" : "°F";
         weatherResult.innerHTML = `
           <h2>Weather in ${name}</h2>
-          <p> Average Temperature: ${temp}${tempUnit}</p>
-          <p> Relative Humidity: ${humidity}%</p>
+          <p>Temperature: ${temp}${tempUnit}</p>
+          <p>Humidity: ${humidity}%</p>
           <p>Description: ${description}</p>
           <p>Date: ${new Date()}</>
       `;
